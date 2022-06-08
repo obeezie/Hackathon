@@ -10,7 +10,7 @@ class Ninja:
         self.poison = 1
     
     def show_stats( self ):
-        print(f"Name: {self.name}\nStrength: {self.strength}\nSpeed: {self.speed}\nHealth: {self.health}\n")
+        print(f"\nName: {self.name}\nStrength: {self.strength}\nSpeed: {self.speed}\nHealth: {self.health}\n")
 
     def choose_action( self, pirate):
         print(f"----------Start of {self.name}'s turn-------------")
@@ -25,7 +25,9 @@ class Ninja:
 
     def attack( self , pirate ):
         pirate.health -= self.strength
-        print(pirate.health)
+
+        print(f"\n{self.name} attacks {pirate.name} for 15dmg")
+        print(f"{pirate.name} health is now {pirate.health}hp")
         return self
 
     def use_item(self, pirate):
@@ -71,3 +73,11 @@ class Ninja:
                 print("\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
                 self.use_item(pirate)
                 
+    @staticmethod
+    def compare_speed(num1, num2):
+        if(num1 == num2):
+            print("These fighters have the same speed!")
+        elif(num1 > num2):
+            print("Fighter 1 is dancing between the raindrops!")
+        elif(num1 < num2):
+            print("Fighter 2 has challenged Barry Allen to a race.")

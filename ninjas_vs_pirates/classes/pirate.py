@@ -9,11 +9,11 @@ class Pirate:
         self.speed = 3
         self.health = 100
         self.parrot = 3
-        self.health_potions = 0
-        self.scurvy = 0
+        self.health_potions = 1
+        self.scurvy = 2
 
     def show_stats( self ):
-        print(f"Name: {self.name}\nStrength: {self.strength}\nSpeed: {self.speed}\nHealth: {self.health}\n")
+        print(f"\nName: {self.name}\nStrength: {self.strength}\nSpeed: {self.speed}\nHealth: {self.health}\n")
 
     def choose_action( self, ninja):
         print(f"----------Start of {self.name}'s turn-------------")
@@ -28,6 +28,9 @@ class Pirate:
 
     def attack ( self , ninja ):
         ninja.health -= self.strength
+
+        print(f"\n{self.name} attacks {ninja.name} for 15dmg")
+        print(f"{ninja.name} health is now {ninja.health}hp")
         return self
 
     def use_item(self, ninja):
