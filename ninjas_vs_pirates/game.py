@@ -10,7 +10,7 @@ michaelangelo = Ninja("Michaelangelo")
 jack_sparrow = Pirate("Jack Sparrow")
 
 def play_again():
-    choice = input("Would you like to play again? y/n")
+    choice = input("Would you like to play again? y/n: ")
     if choice == "y":
         play = True
         michaelangelo.__init__("Michaelangelo")
